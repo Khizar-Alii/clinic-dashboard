@@ -47,7 +47,7 @@ export default function AppointmentForm({
 
   useEffect(() => {
     if (initialData) {
-      const { id, ...rest } = initialData;
+      const { ...rest } = initialData;
       setForm(rest);
     } else {
       setForm({
