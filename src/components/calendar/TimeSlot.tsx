@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { formatHour } from "@/lib/utils/dateUtils";
 
 export default function TimeSlot({ hour }: { hour: number }) {

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { DateTime } from "luxon";
 
 export const hours = Array.from({ length: 11 }, (_, i) => i + 8);

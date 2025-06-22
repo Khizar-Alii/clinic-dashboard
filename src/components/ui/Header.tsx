@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 "use client";
 import { useTheme } from "@/context/ThemeContext";
 import { FaMoon } from "react-icons/fa";

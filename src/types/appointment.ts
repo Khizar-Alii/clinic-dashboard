@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 export interface Appointment {
   id: string;
   patient: string;

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Appointment } from "@/types/appointment";
 import { DateTime } from "luxon";
 

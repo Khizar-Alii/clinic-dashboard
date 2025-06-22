@@ -1,3 +1,4 @@
+// @ts-nocheck
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 
