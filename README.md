@@ -16,7 +16,7 @@ It lets you:
 1. Clone this repo:
 
 ```bash
-git clone https://github.com/your-username/clinic-dashboard.git
+git clone https://github.com/Khizar-Alii/clinic-dashboard.git
 cd clinic-dashboard
 ```
 
