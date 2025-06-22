@@ -1,36 +1,156 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clinic Appointment Dashboard 🏥
 
-## Getting Started
+This is a modern, responsive web dashboard for managing clinic appointments.
 
-First, run the development server:
+It lets you:
+
+- View appointments week by week 🗓️
+- Create, edit, delete appointments ✏️
+- Filter by doctor, patient, or treatment 🔍
+- Supports light and dark themes 🌞🌙
+
+---
+
+## 🔧 Installation
+
+1. Clone this repo:
+
+```bash
+git clone https://github.com/your-username/clinic-dashboard.git
+cd clinic-dashboard
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Add Shadcn UI:
+
+```bash
+npx shadcn@latest init
+npx shadcn@latest add input button dialog label select textarea
+```
+
+---
+
+## 📦 Project Overview
+
+### 📛 Project Name
+
+**Clinic Appointment Dashboard** – built with **Next.js**, **Tailwind CSS**, **shadcn/ui**, and **Luxon** for date/time.
+
+---
+
+### ✨ Features Summary
+
+- Weekly calendar view with appointments
+- Click to add/edit/delete appointments
+- Light/dark theme toggle
+- Responsive for small screens
+- Smooth animations using Framer Motion
+
+---
+
+### 📂 Folder & File Structure
+
+```bash
+.
+├── app/                 # Next.js App Router
+│   ├── layout.tsx       # Main app layout
+│   └── page.tsx         # Dashboard screen
+├── components/          # Reusable UI components
+│   ├── calendar/        # Calendar-related components
+│   ├── AppointmentForm.tsx
+│   ├── Sidebar.tsx
+│   └── ThemeToggle.tsx
+├── lib/
+│   └── utils/           # Utility functions (date, validation, etc.)
+├── types/
+│   └── appointment.ts   # Appointment type definition
+├── styles/
+│   └── globals.css      # Custom CSS and Tailwind setup
+└── README.md
+```
+
+---
+
+### 🧩 Components Breakdown
+
+#### `AppointmentForm.tsx`
+
+- Popup form to create or edit an appointment
+- Uses date/time pickers
+- Validates form before saving
+
+#### `AppointmentBlock.tsx`
+
+- Visual appointment box in the calendar
+- Displays patient & purpose
+
+#### `Calendar.tsx`
+
+- Weekly calendar layout (columns for each day, rows for each hour)
+- Renders appointment blocks in correct time slots
+
+#### `TimeSlot.tsx`
+
+- Shows time labels (e.g., 9AM, 10AM) on the left side
+
+#### `Sidebar.tsx`
+
+- Filters for patient, doctor, and treatment
+- Responsive for small screens
+
+#### `ThemeToggle.tsx`
+
+- Switch between light and dark themes
+- Found in the header
+
+---
+
+### 🖼️ Screens / Pages
+
+- **Dashboard Page (`app/page.tsx`)**  
+  Shows the calendar, appointment form, filters, and theme toggle.
+
+---
+
+### 🎨 Styling
+
+- **Tailwind CSS** – utility-first styling
+- **shadcn/ui** – beautiful UI components
+- **Responsive Design** – works well on mobile and desktop
+- **Dark Mode** – fully supported using Tailwind's `.dark` variant
+
+---
+
+### 🌐 Context / Theme
+
+Dark mode is managed via `class="dark"` on `<html>`.
+
+If you're using a `ThemeToggle.tsx` component:
+
+- It toggles `dark` class using `useEffect` and stores preference in `localStorage`.
+
+---
+
+## 🚀 Run the Project
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📌 Notes
 
-## Learn More
+- Appointments can't overlap in time
+- Past dates are disabled when creating appointments
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Happy coding! ✨
