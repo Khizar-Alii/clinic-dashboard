@@ -11,7 +11,12 @@ import { Button } from "@/components/ui/button";
 export default function HomePage() {
   const { appointments, addAppointment, updateAppointment, deleteAppointment } =
     useCalendar();
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState<{
+    treatment?: string;
+    doctor?: string;
+    patient?: string;
+  }>({});
+
   const [selected, setSelected] = useState<Appointment | null>(null);
   const [formOpen, setFormOpen] = useState(false);
 
